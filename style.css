@@ -1,0 +1,330 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fff0f5;
+    color: #5d4e58;
+    line-height: 1.7;
+}
+
+/* ======================
+   TÍTULO PRIMERO
+   ====================== */
+.titulo-pagina {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #f8bbd0, #fce4ec, #f8bbd0);
+    border-bottom: 3px solid #f48fb1;
+}
+
+.titulo-pagina h1 {
+    font-size: 26px;
+    color: #ad1457;
+    letter-spacing: 2px;
+}
+
+/* ======================
+   INFORMACIÓN CENTRADA SIN EMOJIS
+   ====================== */
+.contenedor-superior {
+    background-color: #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 22px 35px;
+    border-bottom: 3px dotted #f48fb1;
+    flex-wrap: wrap;
+}
+
+.caja-sena {
+    width: 85px;
+    height: 50px;
+    background: white;
+    color: #ec407a;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #f48fb1;
+    flex-shrink: 0;
+}
+
+.letras-sena {
+    letter-spacing: 2px;
+}
+
+.info-principal {
+    text-align: center;
+}
+
+.dato {
+    font-size: 15px;
+    color: #6d4c5f;
+    margin: 3px 0;
+}
+
+/* ======================
+   CONTENEDOR PRINCIPAL
+   ====================== */
+.contenedor {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ======================
+   TARJETAS
+   ====================== */
+.tarjeta {
+    background: #fffafc;
+    border: 2px solid #f8cddf;
+    border-radius: 18px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 10px rgba(244, 143, 177, 0.15);
+}
+
+.tarjeta h2 {
+    color: #c2185b;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.linea-decorativa {
+    height: 2px;
+    background: linear-gradient(90deg, #fce4ec, #f48fb1, #fce4ec);
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+/* ======================
+   CALCULADORA DE FRACCIONES
+   ====================== */
+.calculadora-frac {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.caja-fraccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.caja-fraccion input {
+    width: 75px;
+    padding: 7px;
+    text-align: center;
+    border: 2px solid #f48fb1;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff8fa;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.caja-fraccion input:focus {
+    border-color: #ec407a;
+    background: #fff;
+}
+
+.raya {
+    width: 60px;
+    height: 3px;
+    background-color: #f06292;
+    border-radius: 2px;
+}
+
+.calculadora-frac select {
+    padding: 6px 10px;
+    border: 2px solid #f48fb1;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff8fa;
+    color: #ad1457;
+    cursor: pointer;
+}
+
+/* ======================
+   BOTÓN CALCULAR
+   ====================== */
+.boton-calcular {
+    background: radial-gradient(circle at top left, #fce4ec, #f8bbd0);
+    color: #ad1457;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.15s ease;
+}
+
+.boton-calcular::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    transition: left 0.5s ease;
+}
+
+.boton-calcular:hover::before {
+    left: 100%;
+}
+
+.boton-calcular:hover {
+    color: #fff;
+    background: radial-gradient(circle at top left, #f06292, #ec407a);
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        0 6px 0 #c2185b,
+        0 12px 24px rgba(194, 24, 91, 0.35);
+}
+
+.boton-calcular:active {
+    top: 6px;
+    box-shadow: 
+        inset 0 2px 4px rgba(255,255,255,0.3),
+        0 0 0 #c2185b,
+        0 4px 12px rgba(194, 24, 91, 0.2);
+}
+
+.resultado {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #ad1457;
+    min-height: 30px;
+    font-size: 16px;
+}
+
+/* ======================
+   BOTONES A B C
+   ====================== */
+.texto-aviso {
+    text-align: center;
+    color: #86687a;
+    margin-bottom: 18px;
+}
+
+.grupo-botones {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.boton-letra {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #f06292;
+    background: #f8cddf;
+    color: #ad1457;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-letra:hover {
+    background: #f48fb1;
+    transform: scale(1.15);
+}
+
+.boton-accion {
+    display: block;
+    margin: 18px auto 0;
+    background: linear-gradient(90deg, #ec407a, #f06292);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(236, 64, 122, 0.2);
+}
+
+.boton-accion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(236, 64, 122, 0.3);
+}
+
+/* ======================
+   VIDEO
+   ====================== */
+.reproductor {
+    width: 100%;
+    border-radius: 14px;
+    background: #fce4ec;
+    margin-bottom: 8px;
+}
+
+.texto-video {
+    text-align: center;
+    color: #c2185b;
+    font-size: 14px;
+}
+
+/* ======================
+   PRÓXIMAMENTE
+   ====================== */
+.texto-proximamente {
+    text-align: center;
+    color: #86687a;
+    margin-bottom: 8px;
+}
+
+.texto-mensaje {
+    text-align: center;
+    color: #ec407a;
+    font-size: 15px;
+}
+
+/* ======================
+   PIE DE PÁGINA
+   ====================== */
+.pie-pagina {
+    background-color: #fce4ec;
+    color: #6d4c5f;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 14px;
+    border-top: 2px dotted #f48fb1;
+}
+
+/* ======================
+   RESPONSIVIDAD
+   ====================== */
+@media (max-width: 650px) {
+    .contenedor-superior {
+        flex-direction: column;
+        text-align: center;
+    }
+    .calculadora-frac {
+        flex-direction: column;
+    }
+}
