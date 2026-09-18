@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- TÍTULO PRIMERO -->
     <header class="titulo-pagina">
         <h1>✿ Trabajos de Matemáticas ✿</h1>
     </header>
 
-    <!-- INFORMACIÓN CENTRADA SIN EMOJIS -->
+    <!-- INFORMACIÓN CENTRADA -->
     <div class="contenedor-superior">
         <div class="caja-sena">
             <span class="letras-sena">SENA</span>
@@ -27,83 +26,145 @@
     </div>
 
     <main class="contenedor">
-
         <!-- Sección 1: Calculadora de Fracciones -->
         <section class="tarjeta">
-            <h2> 1. Calculadora de Fracciones</h2>
+            <h2>1. Calculadora de Fracciones</h2>
             <div class="calculadora-frac">
                 <div class="caja-fraccion">
                     <input type="number" placeholder="Numerador" id="num1">
                     <span class="raya"></span>
                     <input type="number" placeholder="Denominador" id="den1">
                 </div>
-
                 <select id="operador">
                     <option value="+">+</option>
                     <option value="-">−</option>
                     <option value="*">×</option>
                     <option value="/">÷</option>
                 </select>
-
                 <div class="caja-fraccion">
                     <input type="number" placeholder="Numerador" id="num2">
                     <span class="raya"></span>
                     <input type="number" placeholder="Denominador" id="den2">
                 </div>
-
                 <button class="boton-calcular">Calcular</button>
             </div>
             <div class="resultado" id="resultado"></div>
         </section>
 
-               <!-- Sección 2: Ejercicios de Funciones -->
+        <!-- Sección 2: Ejercicios de Funciones -->
         <section class="tarjeta">
-            <h2>📝 2. Ejercicios de Funciones</h2>
+            <h2>2. Ejercicios de Funciones</h2>
             <div class="linea-decorativa"></div>
-            <p class="texto-aviso">Elige una opción para continuar</p>
-            <div class="grupo-botones">
-                <button class="boton-letra" onclick="mostrarOpciones('A')">A</button>
-                <button class="boton-letra" onclick="mostrarOpciones('B')">B</button>
-                <button class="boton-letra" onclick="mostrarOpciones('C')">C</button>
-            </div>
-
-            <!-- Aquí aparecerán las opciones de números -->
+            <p class="texto-aviso">Resuelve el siguiente ejercicio</p>
+            
             <div id="area-resultado" style="margin-top: 20px; display: none;">
                 <p id="texto-ejercicio" style="text-align: center; font-weight: bold; color: #ad1457; margin-bottom: 15px;"></p>
-                <div class="grupo-opciones" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <!-- Las opciones se generan automáticamente -->
+                <div class="grupo-opciones" style="display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Las opciones aparecen aquí automáticamente -->
                 </div>
                 <p id="mensaje-validacion" style="text-align: center; margin-top: 15px; font-weight: bold;"></p>
             </div>
-
-            <button class="boton-accion" onclick="reiniciarEjercicio()">🔄 Nuevo Ejercicio</button>
+            <button class="boton-accion" onclick="reiniciarEjercicio()">Nuevo Ejercicio</button>
         </section>
 
-                        <!-- Sección 3: Video Explicativo -->
+        <!-- Sección 3: Video Explicativo -->
         <section class="tarjeta">
-            <h2>🎬 3. Video Explicativo</h2>
+            <h2>3. Video Explicativo</h2>
             <div class="linea-decorativa"></div>
-            
             <video controls width="100%">
-                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                <source src="VIDEO/VIDEO.mp4" type="video/mp4">
             </video>
         </section>
-        <!-- Sección 4: Próximamente -->
+
+                <!-- Sección 4: Figuras Geométricas -->
         <section class="tarjeta">
-            <h2>4. Próximamente</h2>
-            <p class="texto-proximamente">Muy pronto tendremos más contenido aquí...</p>
-            <p class="texto-mensaje">🌸 ¡Gracias por visitar! 🌸</p>
+            <h2>4. Figuras Geométricas</h2>
+            <div class="linea-decorativa"></div>
+
+            <!-- Cuadrado -->
+            <div class="figura-card">
+                <div class="dibujo-cuadrado"></div>
+                <h3>Cuadrado</h3>
+                <div class="campos">
+                    <label>Lado:</label>
+                    <input type="number" id="cuadrado-lado">
+                    <button id="btn-cuadrado">Calcular</button>
+                </div>
+                <div class="resultado-figura" id="cuadrado-resultado">Perímetro: —<br>Área: —</div>
+            </div>
+
+            <!-- Rectángulo -->
+            <div class="figura-card">
+                <div class="dibujo-rectangulo"></div>
+                <h3>Rectángulo</h3>
+                <div class="campos">
+                    <label>Base:</label>
+                    <input type="number" id="rectangulo-base">
+                    <label>Altura:</label>
+                    <input type="number" id="rectangulo-altura">
+                    <button id="btn-rectangulo">Calcular</button>
+                </div>
+                <div class="resultado-figura" id="rectangulo-resultado">Perímetro: —<br>Área: —</div>
+            </div>
+
+            <!-- Triángulo -->
+            <div class="figura-card">
+                <div class="dibujo-triangulo"></div>
+                <h3>Triángulo</h3>
+                <div class="campos">
+                    <label>Lado 1:</label>
+                    <input type="number" id="triangulo-lado1">
+                    <label>Lado 2:</label>
+                    <input type="number" id="triangulo-lado2">
+                    <label>Lado 3:</label>
+                    <input type="number" id="triangulo-lado3">
+                    <label>Base:</label>
+                    <input type="number" id="triangulo-base">
+                    <label>Altura:</label>
+                    <input type="number" id="triangulo-altura">
+                    <button id="btn-triangulo">Calcular</button>
+                </div>
+                <div class="resultado-figura" id="triangulo-resultado">Perímetro: —<br>Área: —</div>
+            </div>
+
+            <!-- Círculo -->
+            <div class="figura-card">
+                <div class="dibujo-circulo"></div>
+                <h3>Círculo</h3>
+                <div class="campos">
+                    <label>Radio:</label>
+                    <input type="number" id="circulo-radio">
+                    <button id="btn-circulo">Calcular</button>
+                </div>
+                <div class="resultado-figura" id="circulo-resultado">Perímetro: —<br>Área: —</div>
+            </div>
+
+            <!-- Trapecio -->
+            <div class="figura-card">
+                <div class="dibujo-trapecio"></div>
+                <h3>Trapecio</h3>
+                <div class="campos">
+                    <label>Base Mayor:</label>
+                    <input type="number" id="trapecio-baseMayor">
+                    <label>Base Menor:</label>
+                    <input type="number" id="trapecio-baseMenor">
+                    <label>Lado 1:</label>
+                    <input type="number" id="trapecio-lado1">
+                    <label>Lado 2:</label>
+                    <input type="number" id="trapecio-lado2">
+                    <label>Altura:</label>
+                    <input type="number" id="trapecio-altura">
+                    <button id="btn-trapecio">Calcular</button>
+                </div>
+                <div class="resultado-figura" id="trapecio-resultado">Perímetro: —<br>Área: —</div>
+            </div>
         </section>
-
-    </main>
-
     <!-- Pie de página -->
     <footer class="pie-pagina">
         © 2026 Laura Sofía Torres Méndez — Ficha 3387498 — SENA
     </footer>
 
-    <!-- Aquí irá tu código JavaScript por aparte -->
-    <!-- <script src="script.js"></script> -->
-
+    <!-- SCRIPT AL FINAL PARA QUE FUNCIONE TODO -->
+    <script src="script.js"></script>
 </body>
 </html>
